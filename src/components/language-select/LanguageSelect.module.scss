@@ -1,0 +1,22 @@
+.languageSelect{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    @media screen and (max-width: 991px){
+        flex-direction: row-reverse;
+    }
+}
+.languages{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+.locale{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+}
+.locale--current{
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,39 @@
+@import '@/styles/vars';
+.button{
+    width: 100%;
+    border-radius: 100px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    background: white;
+    transition: .3s ease;
+    span{
+        flex-shrink: 0;
+    }
+    &:hover{
+        .arrow{
+            transition: .3s ease;
+            transform: translateX(100%);
+        }
+    }
+}
+.arrow{
+    transition: .3s ease;
+}
+.button--secondary{
+    background: $dark-blue;
+    color: white;
+    &:hover{
+        background: #1b3641;
+    }
+}
+.button--primary{
+    color: $dark-blue;
+    background: white;
+    &:hover{
+        color: #000000;
+    }
+}

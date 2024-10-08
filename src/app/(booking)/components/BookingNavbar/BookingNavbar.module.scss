@@ -1,0 +1,137 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 65px;
+    background: #11252c;
+    position: relative;
+    top: 52px;
+
+    @media (max-width: 768px) {
+        top: 83px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 50px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+
+    @media (max-width: 768px) {
+        padding: 0px 20px;
+    }
+}
+
+.schoolLink {
+    padding: 8px 14px;
+    border-radius: 100px;
+    background: #ffffff26;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.21;
+    color: #fff;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.logo {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.text {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    gap: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.decor {
+    color: #fe470d;
+}
+
+.linkWrapper {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    max-width: 763px;
+    justify-content: space-between;
+    gap: 15px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.embla {
+    display: none;
+    overflow: hidden;
+    margin: 0px auto;
+
+    @media (max-width: 768px) {
+        display: unset;
+    }
+}
+.emblaContainer {
+    display: flex;
+    gap: 15px;
+}
+.emblaSlide {
+    min-width: 0;
+    width: fit-content;
+}
+
+.elWrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    & a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        transition: color 150ms ease-in;
+        gap: 10px;
+        @media (max-width: 768px) {
+            font-size: 12px;
+            width: max-content;
+            gap: 5px;
+        }
+        &:hover {
+            color: #fe470d;
+        }
+    }
+
+    @media (max-width: 768px) {
+        gap: 15px;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    @media (max-width: 768px) {
+        color: #fff;
+        opacity: 15%;
+
+        & span {
+            color: #fff !important;
+        }
+    }
+}

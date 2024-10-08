@@ -1,0 +1,144 @@
+@import '@/styles/vars';
+.section {
+	padding: 120px 0 100px;
+	max-width: 1340px;
+	margin: 0 auto;
+}
+.sectionHead {
+	font-weight: 700;
+	display: flex;
+	gap: 368px;
+}
+.sectionDescription {
+	font-size: 54px;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+	max-width: 729px;
+}
+.textBlock {
+	margin-top: 30px;
+	display: flex;
+	color: $paragraph-dark;
+	gap: 48px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #889296;
+}
+.textFirst {
+	max-width: 232px;
+}
+.textSecond {
+	max-width: 264px;
+}
+.name {
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+}
+.imgContainer{
+    margin-top: 50px;
+    display: flex;
+    gap: 338px;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.img {
+	max-width: 670px;
+	border-radius: 6px;
+	height: 366px;
+	object-fit: cover;
+	position: relative;
+}
+
+@media screen and (max-width: 1439px) {
+}
+@media screen and (max-width: 1279px) {
+    .sectionDescription {
+        font-size: 44px;
+	}
+}
+@media (max-width: 1045px){
+    .imgContainer{
+        gap: 30px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		padding: 95px 0 85px;
+	}
+	.sectionHead {
+		gap: 10px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.sectionDescription {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+    .section {
+        padding: 70px 0 68px;
+    }
+    .sectionHead{
+        flex-direction: column;
+    }
+	.sectionDescription {
+		font-size: 34px;
+	}
+    .imgContainer{
+        flex-direction: column-reverse;
+        margin-top: 35px;
+    }
+    .img{
+        max-width: unset;
+        width: 100%;
+        height: 340px;
+        order: 1;
+    }
+    .name{
+        order: 2;
+        font-size: 22px;
+    }
+    .contacts{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 479px) {
+	.sectionDescription {
+		font-size: 28px;
+	}
+	.textBlock {
+		margin-top: 20px;
+		flex-direction: column;
+		gap: 15px;
+		font-size: 14px;
+	}
+	.textFirst,
+	.textSecond {
+		max-width: none;
+	}
+    .img{
+        height: 200px;
+    }
+    .imgContainer{
+        gap: 20px;
+    }
+    .name{
+        font-size: 18px;
+    }
+}

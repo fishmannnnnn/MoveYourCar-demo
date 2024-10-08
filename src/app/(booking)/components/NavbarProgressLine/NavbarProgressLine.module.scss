@@ -1,0 +1,23 @@
+.progressLine {
+    position: absolute;
+    bottom: -5px;
+    height: 5px;
+    width: 100%;
+    background-color: #fe470d;
+}
+
+.firstStep {
+    transform: translateX(-63%);
+}
+
+.secondStep {
+    transform: translateX(-52.7%);
+}
+
+.thirdStep {
+    transform: translateX(-42.2%);
+}
+
+.finalStep {
+    transform: translateX(-29%);
+}

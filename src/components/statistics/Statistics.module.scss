@@ -1,0 +1,100 @@
+@import '@/styles/vars';
+.section {
+	padding: 100px 0 100px;
+	max-width: 1340px;
+	margin: 0 auto;
+}
+.sectionHead {
+	font-weight: 700;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 40px;
+}
+.statistics {
+	display: flex;
+	width: 100%;
+	max-width: 950px;
+	border-bottom: 1px solid $line-light-bg;
+}
+.statisticsItem {
+	padding: 0 0 30px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+	border-left: 1px solid $line-light-bg;
+	width: 280px;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.count {
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+	span {
+		color: $paragraph-light;
+	}
+}
+.title {
+	font-weight: 400;
+	line-height: 1.5;
+	color: $paragraph-light;
+}
+@media screen and (max-width: 1439px) {
+}
+@media screen and (max-width: 1279px) {
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		padding: 85px 0 85px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.section {
+		padding: 70px 0 70px;
+	}
+	.sectionHead {
+		gap: 30px;
+	}
+	.statisticsItem {
+		padding: 0 15px 15px;
+	}
+	.count {
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 479px) {
+	.statisticsItem {
+		border: none;
+		flex-direction: row;
+		align-items: center;
+		padding: 0;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $line-light-bg;
+        width: 100%;
+        justify-content: space-between;
+	}
+	.statistics {
+		border: none;
+		flex-direction: column;
+        gap: 20px;
+	}
+	.info {
+		gap: 5px;
+	}
+	.img {
+		order: 2;
+	}
+	.count {
+		font-size: 18px;
+	}
+	.title {
+		font-size: 14px;
+	}
+}

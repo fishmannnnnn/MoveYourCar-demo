@@ -1,0 +1,159 @@
+@import '@/styles/vars';
+.section {
+	padding: 140px 0 0;
+	max-width: 1340px;
+	margin: 0 auto;
+}
+.sectionHead {
+	font-weight: 700;
+	display: flex;
+	gap: 394px;
+}
+.sectionDescription {
+	font-size: 48px;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+	max-width: 729px;
+}
+.accordion {
+	margin-top: 50px;
+	border-top: 1px solid $line-light-bg;
+}
+.accordionItem {
+	padding: 30px 0;
+	border-bottom: 1px solid $line-light-bg;
+	cursor: pointer;
+}
+.accordionHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	gap: 26px;
+}
+.itemNumber {
+	flex-shrink: 0;
+	color: $dark-blue;
+	line-height: 1.5;
+	span {
+		color: $paragraph-light;
+	}
+}
+.accordionButton {
+	width: 20px;
+	height: 20px;
+	display: grid;
+	place-items: center;
+}
+.plusIcon {
+	transition: transform 0.3s ease-in-out;
+}
+.crossIcon {
+	transform: rotate(-45deg);
+	transition: transform 0.3s ease-in-out;
+}
+.headContent,
+.accordionBody {
+	max-width: 1090px;
+	width: 100%;
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+}
+.accordionBodyWrapper {
+	display: grid;
+	transition: grid-template-rows 0.3s ease-in-out, margin-top .1s ease-in-out;
+	grid-template-rows: 0fr;
+	.accordionBodyContainer {
+		overflow: hidden;
+	}
+	&--visible {
+		margin-top: 15px;
+		grid-template-rows: 1fr;
+	}
+	&--hidden{
+		margin-top: 0;
+		// transition: margin-top .1s ease-in-out;
+		// transition-delay: .3s;
+	}
+}
+.accordionBodyContainer{
+	display: flex;
+	justify-content: space-between;
+	gap: 26px;
+}
+.accordionBody {
+	.itemNumber {
+		opacity: 0;
+	}
+}
+.itemQuestion {
+	max-width: 670px;
+	width: 100%;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+}
+.itemAnswer {
+	max-width: 670px;
+	width: 100%;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $paragraph-light;
+}
+@media screen and (max-width: 1439px) {
+}
+@media screen and (max-width: 1279px) {
+	.sectionDescription {
+		font-size: 44px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		padding: 120px 0 0;
+	}
+	.sectionHead {
+		gap: 10px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.sectionDescription {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.sectionHead{
+		flex-direction: column;
+	}
+	.sectionDescription {
+		font-size: 34px;
+	}
+	.section {
+		padding: 100px 0 0;
+	}
+	.accordionItem{
+		padding: 20px 0;
+	}
+	.itemNumber,
+	.itemAnswer{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 479px) {
+	.sectionDescription {
+		font-size: 28px;
+	}
+	.accordionBodyWrapper--visible{
+		margin-top: 10px;
+	}
+	.itemNumber,
+	.itemAnswer{
+		font-size: 12px;
+	}
+	.itemQuestion{
+		font-size: 14px;
+	}
+}

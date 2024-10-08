@@ -1,0 +1,161 @@
+@import '@/styles/vars';
+.section {
+    padding: 140px 0 50px;
+    border-bottom: 1px solid $line-light-bg;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+.sectionHead {
+    font-weight: 700;
+    display: flex;
+    gap: 367px;
+}
+.sectionDescription {
+    font-size: 54px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $dark-blue;
+    max-width: 729px;
+}
+.content {
+	margin-top: 15px;
+}
+.description {
+	font-weight: 400;
+	line-height: 1.5;
+	color: $paragraph-light;
+}
+.number,
+.email {
+    width: fit-content;
+    flex-shrink: 0;
+    color: $dark-blue;
+    line-height: 1.5;
+    span {
+        color: $paragraph-light;
+    }
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.form {
+    margin-top: 50px;
+    max-width: 670px;
+    position: relative;
+}
+.credentials {
+    border-radius: 6px;
+    overflow: hidden;
+    border-bottom: 1px solid $dark-blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.nameInput,
+.emailInput,
+.phoneInput {
+    width: 100%;
+    height: 46px;
+    padding: 15px;
+    background: $form-bg-light;
+    color: $dark-blue;
+    &::placeholder {
+        color: $paragraph-light;
+    }
+}
+.phoneInput {
+	padding-left: 34px;
+}
+.countryCode {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 0 0 0 15px;
+    display: grid;
+    place-content: center;
+	font-weight: 400;
+	line-height: 1.2;
+	font-size: 16px;
+	height: 100%;
+	color: $dark-blue;
+}
+.nameInputContainer,
+.phoneInputContainer,
+.emailInputContainer {
+    position: relative;
+}
+.nameInputContainer::after,
+.emailInputContainer::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    right: 0;
+    height: 36px;
+    width: 1px;
+    background: $line-light-bg;
+}
+.submit {
+    margin-top: 30px;
+}
+@media screen and (max-width: 1439px) {
+}
+@media screen and (max-width: 1279px) {
+	.sectionDescription {
+		font-size: 44px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		padding: 120px 0 30px;
+	}
+	.sectionHead {
+		gap: 30px;
+		justify-content: space-between;
+	}
+	.sectionDescription {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.sectionHead {
+		gap: 10px;
+		flex-direction: column;
+	}
+	.sectionDescription {
+		font-size: 34px;
+	}
+	.section {
+		padding: 100px 0 0;
+		border: none;
+	}
+	.form {
+		margin-top: 30px;
+	}
+	.credentials {
+		grid-template-columns: 1fr;
+	}
+	.nameInputContainer,
+	.emailInputContainer {
+		&::after {
+			top: unset;
+			bottom: 0;
+			left: 15px;
+			height: 1px;
+			width: 100%;
+			background: $line-light-bg;
+		}
+	}
+}
+@media screen and (max-width: 479px) {
+    .sectionDescription {
+        font-size: 28px;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}

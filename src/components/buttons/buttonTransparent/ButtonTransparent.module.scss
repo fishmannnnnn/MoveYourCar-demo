@@ -1,0 +1,21 @@
+@import '@/styles/vars';
+.button {
+    font-weight: 700;
+    background: $line-dark-bg;
+    border-radius: 100px;
+    padding: 8px 14px;
+    &:hover {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    @media screen and (max-width: 991px) {
+        font-size: 14px;
+    }
+}
+
+.dark {
+    background: #11252c26;
+    color: #11252c;
+    &:hover {
+        color: #000;
+    }
+}

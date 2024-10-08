@@ -1,0 +1,64 @@
+.phoneWrapper {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fe470d;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    animation: radial-pulse 1s infinite;
+    transition: all 300ms ease-out;
+    border: none;
+    & svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    &:hover {
+        background: #fe784d;
+    }
+
+    @media (max-width: 768px) {
+        right: 10px;
+        bottom: 25px;
+        width: 65px;
+        height: 65px;
+        & svg {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgb(245 141 29 / 50%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgb(245 141 29 / 0%);
+    }
+}
+
+.mobile {
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+    }
+}
+
+.desktop {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.pressed {
+    background: #da8a71;
+}

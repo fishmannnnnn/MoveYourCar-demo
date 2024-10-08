@@ -1,0 +1,147 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 70px;
+    margin-top: 186px;
+    margin-bottom: 40px;
+    min-height: 100dvh;
+
+    @media (max-width: 768px) {
+        gap: 0px;
+        margin-top: 150px;
+    }
+}
+
+.heading,
+.contact {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 50px;
+    margin: 0px auto;
+    display: flex;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0px 20px;
+        align-items: flex-start;
+
+        & img {
+            width: 100px;
+            height: 100px;
+            align-self: flex-end;
+        }
+    }
+}
+
+.contact {
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        margin-top: 70px;
+    }
+}
+
+.commomWrapper {
+    display: flex;
+    width: 100%;
+    max-width: 65%;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #657981;
+    }
+    @media (max-width: 768px) {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.heading {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mainTitle {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    max-width: 682px;
+    @media (max-width: 768px) {
+        margin-top: 10px;
+        font-size: 36px;
+    }
+}
+
+.subTitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    color: #fe470d;
+    max-width: 150px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        max-width: unset;
+        margin: 0px;
+    }
+}
+
+.btn {
+    width: 100%;
+    max-width: 180px;
+
+    @media (max-width: 768px) {
+        max-width: unset;
+        & img {
+            width: 20px;
+            height: 20px;
+        }
+        & span {
+            margin-bottom: -2px;
+        }
+    }
+}
+
+.left {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    max-width: 500px;
+
+    @media (max-width: 768px) {
+        max-width: unset;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.spec {
+    max-width: 220px;
+
+    @media (max-width: 768px) {
+        max-width: unset;
+    }
+}
+
+.phoneWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    & a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}

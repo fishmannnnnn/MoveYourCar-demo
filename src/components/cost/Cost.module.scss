@@ -1,0 +1,214 @@
+@import '@/styles/vars';
+.section {
+	padding: 120px 0 0;
+	max-width: 1340px;
+	margin: 0 auto;
+}
+.sectionHead {
+	font-weight: 700;
+	display: flex;
+	gap: 390px;
+}
+.sectionDescription {
+	font-size: 54px;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+	max-width: 729px;
+}
+.content {
+	margin-top: 70px;
+}
+.cost{
+    display: grid;
+    grid-template-columns: 390px 280px 1fr;
+    border-bottom: 1px solid $line-light-bg;
+}
+.weAccept{
+    padding: 0 0 30px 0;
+    max-width: 220px;
+    align-self: flex-end;
+}
+.atOnce{
+    padding: 0 60px 30px 30px;
+    border-left: 1px solid $line-light-bg;
+}
+.youWork{
+    padding: 0 0 30px 30px;
+    border-left: 1px solid $line-light-bg;
+    .priceDescription{
+        max-width: 350px;
+    }
+}
+.price {
+	font-size: 24px;
+	color: $accent-color;
+	span {
+		color: $dark-blue;
+	}
+}
+.weAccept,
+.priceDescription,
+.description {
+	font-weight: 400;
+	line-height: 1.5;
+	color: $paragraph-light;
+}
+.priceDescription {
+	margin-top: 10px;
+}
+.job{
+    padding: 50px 0;
+    border-bottom: 1px solid $line-light-bg;
+    display: grid;
+    grid-template-columns: 420px 368px 302px;
+    gap: 15px 0;
+}
+.img{
+    max-width: 302px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    grid-column: 3;
+    grid-row: 1/3;
+}
+.title{
+    grid-row: 1;
+    grid-column: 2;
+    font-weight: 700;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: $dark-blue;
+}
+.description{
+    grid-row: 2;
+    grid-column: 2;
+    max-width: 220px;
+}
+@media screen and (max-width: 1439px) {
+}
+@media screen and (max-width: 1279px) {
+	.sectionDescription {
+		font-size: 44px;
+	}
+    .cost{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .weAccept{
+        grid-column: 3;
+        padding-left: 30px;
+    }
+    .atOnce,.youWork{
+        grid-row: 1;
+        border: none;
+        border-right: 1px solid $line-light-bg;
+    }
+    .atOnce{
+        padding-left: 0;
+    }
+    .youWork{
+        padding-right: 30px;
+    }
+    .job{
+        grid-template-columns: 1fr 1fr;
+    }
+    .title,.description{
+        grid-column: 1;
+    }
+    .img{
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		padding: 95px 0 0;
+	}
+	.sectionHead {
+		gap: 10px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.sectionDescription {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.sectionHead {
+		flex-direction: column;
+	}
+	.sectionDescription {
+		font-size: 34px;
+	}
+	.section {
+		padding: 70px 0 0;
+	}
+	.content {
+		margin-top: 30px;
+	}
+    .cost{
+        grid-template-columns: 1fr;
+    }
+    .atOnce{
+        padding: 0;
+        grid-column: 1;
+        grid-row: 1;
+        border: none;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $line-light-bg;
+    }
+    .youWork{
+        padding: 0;
+        grid-column: 1;
+        grid-row: 2;
+        border: none;
+        padding: 20px 0;
+        border-bottom: 1px solid $line-light-bg;
+    }
+    .weAccept{
+        grid-column: 1;
+        grid-row: 3;
+        padding: 0;
+        padding: 20px 0;
+    }
+    .job{
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+        padding: 35px 0 20px;
+    }
+    .img{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .description{
+        grid-row: 3;
+        max-width: none;
+    }
+}
+@media screen and (max-width: 479px) {
+    .sectionDescription {
+        font-size: 28px;
+	}
+    .weAccept{
+        font-size: 14px;
+    }
+    .atOnce{
+        font-size: 14px;
+    }
+    .youWork{
+        font-size: 14px;
+    }
+	.priceDescription {
+        margin-top: 5px;
+	}
+    .title{
+        font-size: 14px;
+    }
+    .img{
+        max-width: 208px;
+        height: 150px;
+    }
+    .description{
+        font-size: 12px;
+    }
+}

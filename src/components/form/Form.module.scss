@@ -1,0 +1,391 @@
+@import '@/styles/vars';
+
+.dashLeft,
+.dashRight {
+    position: absolute;
+    // top: -109px;
+    bottom: -68px;
+}
+.dashLeft {
+    left: -470px;
+}
+.dashRight {
+    right: -470px;
+}
+
+.formWrapper {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.form {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 500px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100vh;
+        left: -20px;
+        top: -454px;
+        right: 0;
+        background: $line-dark-bg;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100vh;
+        right: -20px;
+        top: -454px;
+        background: $line-dark-bg;
+    }
+}
+.search {
+    border-radius: 6px;
+    display: flex;
+    border-bottom: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        background: $line-dark-bg;
+        width: 1px;
+        height: 36px;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.transportOptions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    label {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+}
+.submit {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1439px) {
+    .heading {
+        font-size: 14vw;
+    }
+}
+@media screen and (max-width: 1279px) {
+    .dashLeft,
+    .dashRight {
+        display: none;
+    }
+}
+@media screen and (max-width: 991px) {
+    // .formTitle::before,
+    .form::before,
+    .form::after {
+        content: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .search::after {
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        left: 15px;
+    }
+    .deliveryInput {
+        width: 100%;
+    }
+    .container {
+        padding: 70px 0 50px;
+    }
+    .text {
+        margin-top: 10px;
+    }
+    .formTitle {
+        margin-top: 85px;
+    }
+    .search {
+        margin-top: 20px;
+    }
+    .submit {
+        margin-top: 35px;
+    }
+    .section {
+        background-position: 35.2%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .heading {
+        font-size: 14.5vw;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .formTitle {
+        font-size: 18px;
+    }
+    .transportOptions {
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+// SECOND STEP
+
+.secondStep {
+    border-radius: 6px;
+    border-bottom: 1px solid white;
+    display: grid;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    grid-template-columns: repeat(3, 1fr);
+
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        height: 37px;
+        left: 33%;
+        width: 1px;
+        background: $line-dark-bg;
+        @media (max-width: 768px) {
+            height: 1px;
+            left: 15px;
+            top: 47px;
+            right: 0px;
+            width: 95.4%;
+        }
+    }
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        height: 37px;
+        left: 67%;
+        width: 1px;
+        z-index: 2;
+        background: $line-dark-bg;
+        @media (max-width: 768px) {
+            height: 1px;
+            left: 15px;
+            top: 97px;
+            right: 0px;
+            width: 95.4%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.inpt {
+    // background: rgba(255, 255, 255, 0.1);
+    // backdrop-filter: blur(15px);
+    background: transparent;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    border: none;
+    height: 100%;
+    width: 100%;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+    }
+
+    &:focus {
+        outline: none;
+        color: #fff;
+    }
+}
+
+.dateInputWrapper {
+    position: relative;
+    width: 166.6px;
+
+    @media (max-width: 768px) {
+        width: unset;
+    }
+}
+
+// .selectWrapp {
+//     position: relative;
+//     &::after {
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         right: 15px;
+//         content: ' ';
+//         width: 6px;
+//         height: 6px;
+//         background: url('../../../public/form/select-arrow.svg') no-repeat;
+//     }
+// }
+
+// .suggest {
+//     top: 48px;
+//     height: min-content;
+//     min-height: 0px;
+//     position: absolute;
+//     border-radius: 6px;
+//     padding: 15px;
+//     left: 0px;
+//     z-index: 3;
+//     width: 100%;
+//     max-height: 150px;
+//     overflow-y: scroll;
+//     background: #fe470d;
+//     -ms-overflow-style: none; /* IE and Edge */
+//     scrollbar-width: none; /* Firefox */
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
+//     & li {
+//         border-bottom: 1px solid #ffffff59;
+//         transition: background-color 300ms ease-out;
+//         cursor: pointer;
+//         &:first-child {
+//             margin-top: -10px;
+//         }
+//         & button {
+//             width: 100%;
+//             text-align: left;
+//             padding: 10px 0px;
+//         }
+//     }
+// }
+
+// THIRD STEP
+.privacyPolicy {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #ffffff59;
+    margin-top: 15px;
+}
+
+.first {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.last {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.link {
+    color: #fe470d;
+    text-decoration: underline;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.names {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+
+    & button {
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+        width: fit-content;
+        & p {
+            width: fit-content;
+        }
+    }
+}
+
+.backgroindLine {
+    position: relative;
+    height: 1px;
+    background: #657981;
+    width: 100%;
+}
+
+.progressLine {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 3px;
+    background: #fe470d;
+    transition: width 300ms ease-out;
+}
+
+.stepTwoP {
+    width: 19.5%;
+
+    @media (max-width: 375px) {
+        width: 23%;
+    }
+}
+
+.stepThreeP {
+    width: 57.5%;
+
+    @media (max-width: 375px) {
+        width: 61%;
+    }
+}
+
+.orange {
+    color: #fe470d;
+}
+
+.radioSpan {
+    @media (max-width: 768px) {
+        font-size: 14px;
+        margin-bottom: -3px;
+    }
+}
+.formTitle {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 80px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        width: 540px;
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        top: -50px;
+        background: $line-dark-bg;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.firstWrapper {
+    width: 50%;
+    position: relative;
+}

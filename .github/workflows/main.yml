@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish Docker
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        with:
+          name: sheinid/moveyourcar
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          dockerfile: Dockerfile
+          tags: latest
+      - name: Deploy to DigitalOcean
+        uses: appleboy/ssh-action@v1.0.0
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          envs: DOCKER_USERNAME, DOCKER_PASSWORD
+          script: |
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+            docker pull sheinid/moveyourcar:latest
+            docker stop moveyourcar
+            docker system prune -f
+            docker run --name moveyourcar -dit -p 3000:3000 sheinid/moveyourcar:latest

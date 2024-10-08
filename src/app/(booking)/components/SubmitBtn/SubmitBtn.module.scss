@@ -1,0 +1,11 @@
+.btn {
+    margin-top: 50px;
+
+    &:disabled {
+        opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 30px;
+    }
+}

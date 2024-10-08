@@ -1,0 +1,84 @@
+@import '@/styles/vars';
+.section {
+    color: white;
+    background: url('../../assets/images/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+}
+.navbarWrapper {
+    position: relative;
+    z-index: 1;
+}
+.dashLeft,
+.dashRight {
+    position: absolute;
+    top: -109px;
+}
+.dashLeft {
+    left: -470px;
+}
+.dashRight {
+    right: -470px;
+}
+.container1 {
+    height: 825px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media (max-width: 768px) {
+        height: 646px;
+    }
+}
+.container {
+    // overflow: hidden;
+    padding: 45px 0 70px;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 825px;
+}
+.heading {
+    font-size: 222px;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin: 0px;
+}
+.text {
+    color: $paragraph-dark;
+    max-width: 402px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1439px) {
+    .heading {
+        font-size: 14vw;
+    }
+}
+@media screen and (max-width: 1279px) {
+    .dashLeft,
+    .dashRight {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 70px 0 50px;
+    }
+    .text {
+        margin-top: 10px;
+    }
+    .section {
+        background-position: 35.2%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .heading {
+        font-size: 14.5vw;
+    }
+    .text {
+        font-size: 14px;
+    }
+}

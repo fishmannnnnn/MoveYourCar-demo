@@ -1,0 +1,15 @@
+.inpt {
+    border-radius: 6px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #11252c;
+    background: #11252c0d;
+    padding: 15px;
+    &:focus {
+        outline: none;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}
